@@ -1,0 +1,16 @@
+$bg_color: rgb(233, 236, 242);
+$shape_color_pri: rgb(121, 164, 181);
+$shape_color_sec: rgb(192, 196, 145);
+$heading_font_color: rgb(20, 20, 19);
+$text_font_color: rgb(0, 0, 0);
+$intro_font: 'Merriweather Sans', sans-serif;
+$heading_font: 'Exo', sans-serif; 
+$text-font: 'Proza Libre', sans-serif;
+
+.rect {
+   background-color: blue;
+}
+
+.intro-text-container {
+   font-family: $intro-font;
+}
