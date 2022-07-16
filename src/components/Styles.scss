@@ -7,10 +7,87 @@ $intro_font: 'Merriweather Sans', sans-serif;
 $heading_font: 'Exo', sans-serif; 
 $text-font: 'Proza Libre', sans-serif;
 
-.rect {
-   background-color: blue;
+// ************* INTRO *************
+
+.intro-container {
+   
 }
 
 .intro-text-container {
    font-family: $intro-font;
+}
+
+// ************* SERVICES *************
+
+.text a {
+   cursor: url(./pointer-click.png), pointer;
+}
+
+// ************* BUTTON *************
+
+@mixin btn__split($shape-color-pri, $shape-color-sec, $text-font-color) {
+   .btn {
+      position: relative;
+      letter-spacing: 0.25em;
+      margin: 0 auto;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      outline: none;
+      font-size: 28px;
+      color: $text-font-color;
+      z-index: 1;
+   
+      &::after,
+      &::before {
+         content: "";
+         position: absolute;
+         height: 100%;
+         width: 50%;
+         transform: skewX(30deg);
+         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+         z-index: -2;
+      }
+      &::before {
+         background-color: $shape-color-pri;
+         top: -1rem;
+         left: 0rem;
+      }
+      &::after {
+         background-color: $shape-color-sec;
+         top: 1rem;
+         left: 8rem;
+      }
+      &:hover {
+         &::before,
+         &::after {
+            top: 0;
+            transform: skewx(0deg);
+         }
+         &::after {
+            left: 0rem;
+         }
+         &::before {
+            left: 8.75rem;
+         }
+      }
+   }
+}
+
+ .button-container {
+   padding-top: 4rem;
+   text-align: center;
+   width: auto;
+   margin: auto;
+ }
+
+.button-container a {
+   text-decoration: none;
+   font-weight: 600;
+   cursor: url(point-click.png), pointer;
+}
+
+@include btn__split($shape-color-pri, $shape-color-sec, $text-font-color);
+
+.space-holder {
+   height: 10rem;
 }

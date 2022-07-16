@@ -1,6 +1,7 @@
 import './Styles.scss';
-import { FaAirbnb } from 'react-icons/fa';
+// import { FaAirbnb } from 'react-icons/fa';
 import ProfilePic from '../images/profile-pic.png';
+import AirbnbPng from '../images/airbnb.png';
 
 const Intro = () => {
    return (
@@ -13,7 +14,8 @@ const Intro = () => {
                <h1>I'm Teddy</h1>
             </div>
             <div className="intro-airbnb">
-               <h2><FaAirbnb/> Airbnb</h2>
+               {/* <h1><FaAirbnb/> Airbnb</h1> */}
+               <img className='airbnb-png' src={AirbnbPng} alt='airbnb'></img>
             </div>
             <div className="intro-super">
                <h1>Superhost</h1>
