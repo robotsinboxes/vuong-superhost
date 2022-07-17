@@ -1,9 +1,10 @@
 import './Styles.scss';
+import React from 'react';
 import BathroomWall from '../images/bathroom_wall.jpg';
 
 const About = () => {   
    return (
-      <div className="about-container">
+      <div id="about" className="about-container">
          <div className="decorative-container"></div>
          <div className="about-me-text">
             <h1>About Me</h1>

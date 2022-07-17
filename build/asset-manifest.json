@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5fdaa516.css",
+    "main.js": "/static/js/main.5e95bfd8.js",
+    "static/media/bathroom_wall.jpg": "/static/media/bathroom_wall.c15bf45c58636671a7c8.jpg",
+    "static/media/living_room.jpg": "/static/media/living_room.f483c966c2c72ad1df04.jpg",
+    "static/media/profile-pic.png": "/static/media/profile-pic.5ef45954ae75adcc76a6.png",
+    "index.html": "/index.html",
+    "main.5fdaa516.css.map": "/static/css/main.5fdaa516.css.map",
+    "main.5e95bfd8.js.map": "/static/js/main.5e95bfd8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fdaa516.css",
+    "static/js/main.5e95bfd8.js"
+  ]
+}
