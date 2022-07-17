@@ -14,11 +14,6 @@ function App() {
          <div className="intro-component">
             <Intro />
          </div>
-         {/* <div id="curved-corner-bottomleft"></div>
-         <div id="curved-corner-bottomright"></div>
-         <div id="curved-corner-topleft"></div>
-         <div id="curved-corner-topright"></div> */}
-         
          <div className="about-component">
             <About />
          </div>
