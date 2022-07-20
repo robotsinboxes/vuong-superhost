@@ -1,5 +1,5 @@
 import './Styles.scss';
-import LivingRoom from '../images/living_room.jpg';
+import BathroomWall from '../images/bathroom_wall.jpg';
 
 const Services = () => {   
    return (
@@ -13,10 +13,13 @@ const Services = () => {
             <br></br>
             <p>As a Superhost, I can also help give you best practices for furnishing and designing the experience. I can help you ‘sell’ your space with guidance around photography, descriptions, and amenities. Finally, I’ll help you get the place ready to welcome your first guests.</p>
             <br></br>
-            <p>To get started, just click on <span className='hyperlink'><a target='_blank' rel='noreferrer' href='https://www.airbnb.com/askasuperhost?from=mentee_landing_page&ambassadorUserId=14564141&r=teddyvuong&s=9'>this link</a></span>, and Airbnb will connect you with me. Send me a quick introduction and i’ll get back to you the same day. </p>
+            <p className='link'>To get started, just click on 
+               <a href='https://www.airbnb.com/askasuperhost?from=mentee_landing_page&ambassadorUserId=14564141&r=teddyvuong&s=9' target='_blank' rel='noreferrer' className='link'> this link</a>
+            , and Airbnb will connect you with me. Send me a quick introduction and i’ll get back to you the same day. </p>
+         
          </div>
          <div className="livingrm-img"> 
-            <img src={LivingRoom} alt="living-room" />
+            <img src={BathroomWall} alt="living-room" />
          </div>
          <div className="button-container">
             <a href='https://www.airbnb.com/askasuperhost?from=mentee_landing_page&ambassadorUserId=14564141&r=teddyvuong&s=9' target='_blank' rel='noreferrer' className='btn'>

@@ -1,17 +1,13 @@
 import './Styles.scss';
-// import { FaAirbnb } from 'react-icons/fa';
-import ProfilePic from '../images/profile-pic.png';
+
 import AirbnbPng from '../images/airbnb.png';
 
 const Intro = () => {
    return (
       <div className="intro-container">
-         <div className="pic-container">
-            <img src={ProfilePic} className="profile-pic" alt="profile"/>
-         </div>
          <div className="intro-name">
-            <h2>I'm</h2>
-            <h1>Teddy,</h1>
+            <p>Learn tips</p>
+            <p>from an official</p>
          </div>
          <div className="intro-airbnb">
             {/* <h1><FaAirbnb/> Airbnb</h1> */}

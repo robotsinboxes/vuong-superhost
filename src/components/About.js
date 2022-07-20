@@ -1,6 +1,6 @@
 import './Styles.scss';
 import React from 'react';
-import BathroomWall from '../images/bathroom_wall.jpg';
+import ProfilePic from '../images/profile-pic.png';
 
 const About = () => {   
    return (
@@ -14,7 +14,7 @@ const About = () => {
             <p>Just one year after that purchase, we were awarded ‘Superhost’ status by Airbnb, and booking demand for our house increasingly grew. In 2021, Airbnb asked me to become a Superhost Ambassador (even featuring me in their ads), offering me a chance to consult and help people become new hosts at no cost to them. </p>
          </div>
          <div className="bathroom-img"> 
-            <img src={BathroomWall} alt="bathroom" />
+            <img src={ProfilePic} alt="bathroom" />
          </div>
       </div>
    )
