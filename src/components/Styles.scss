@@ -1,8 +1,8 @@
-$bg_color: rgb(74, 93, 103);
+$bg_color: rgba(74, 93, 103, 0.57);
 $bg_color_lite: white;
 $shadow_color: rgba(59, 59, 60, 0.632);
 $shape_color_pri: rgb(50, 74, 87);
-$shape_color_sec: rgb(192, 196, 145);
+$shape_color_sec: rgba(192, 196, 145, 0.744);
 $font_color: rgb(1, 1, 1);
 $btn_font_color: rgb(41, 27, 27);
 $intro_font: 'Merriweather Sans',
@@ -19,8 +19,8 @@ sans-serif;
    background-image: url(../images/living_room.jpg) ;
    background-size: cover;
    display: grid;
-   grid-template-columns: 1fr repeat(6, 2fr);
-   grid-template-rows: repeat(12, 8%);
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: repeat(12, 1fr);
    font-family: $intro-font;
    color: $font-color;
    justify-items: center;
@@ -28,55 +28,68 @@ sans-serif;
    height: 100vh;
    width: 100vw;
    overflow: hidden;
+   z-index: -1;
 }
 
+.circle {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   position: relative;
+   border-radius: 50%;
+   grid-area: 1 / 1 / 13 / 4;
+   background-color: rgba(128, 105, 0, 0.423);
+   z-index: 0;
+   margin: -25em 0 0 -20em;
+   padding: 8em;
+}
 
 .pic-container img {
    max-width: 100vw;
    max-height: 100vh;
 }
 
-.intro-name {
-   grid-area: 3 / 1 / 6 / 5;
-   padding: 0 5em 0.6em 1em;
+.intro {
+   grid-area: 1 / 1 / 5 / 3;
    border-radius: 10px;
    background: transparent;
    font-family: $intro-font;
-   font-size: 3rem;
+   font-size: 3vw;
    background: transparent;
+   justify-self: start;
+   margin: 1em 0 1em 2.5em;
+   z-index: 1;
 }
 
 .intro-airbnb {
-   grid-area: 4 / 1 / 9 / 4;
-   background: transparent;
+   grid-area: 4 / 2 / 6 / 3;
+   z-index: 1;
 }
 
 .airbnb-png {
-   width: 15vw;
-   background: transparent;
-   padding-left: 10%;
+   width: 18vw;
 }
 
 .intro-super {
-   grid-area: 7 / 2 / 11 / 4;
-   font-size: 2.5vw;
+   grid-area: 6 / 1 / 7 / 4;
+   font-size: 2vw;
+   margin-left: 1em;
    border: 1px solid black;
    padding: .5em 1em;
    transform: skew(-10deg);
-   margin-left: -5em;
-}
-
-.intro-super h1 {
-   background: transparent;
+   background-color: $bg-color;
+   justify-self: start;
 }
 
 .intro-ambass {
-   grid-area: 9 / 2 / 13 / 4;
-   font-size: 2.5vw;
+   grid-area: 6 / 1 / 8 / 4;
+   font-size: 2vw;
    border: 1px solid black;
+   background-color: $shape_color_sec;
    padding: .5em 1em;
    transform: skew(-10deg);
-   margin-left: 25%;
+   margin: 3.5em 0 0 2em;
+   justify-self: start;
 }
 
 .intro-ambass h1 {
