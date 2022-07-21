@@ -18,10 +18,10 @@ const Intro = () => {
             <img className='airbnb-png' src={AirbnbPng} alt='airbnb'></img>
          </div>
          <div className="intro-super">
-            <h1>SUPERHOST</h1>
+            <h1>Superhost</h1>
          </div>
          <div className="intro-ambass">
-            <h1>AMBASSADOR</h1>
+            <h1>Ambassador</h1>
          </div>
       </div>
    )

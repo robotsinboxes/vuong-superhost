@@ -1,17 +1,19 @@
-$bg_color: rgba(74, 93, 103, 0.57);
-$bg_color_lite: white;
+$bg_color: rgba(15, 122, 139, 0.747);
+$bg_color_lite: rgba(240, 226, 189, 0.651);
+$text_bg: rgba(240, 226, 189, 0.651);
 $shadow_color: rgba(59, 59, 60, 0.632);
-$shape_color_pri: rgb(50, 74, 87);
-$shape_color_sec: rgba(192, 196, 145, 0.744);
-$font_color: rgb(1, 1, 1);
+$border_color: rgba(69, 83, 82, 0.364);
+$font_color: rgb(48, 43, 43);
 $btn_font_color: rgb(41, 27, 27);
 $intro_font: 'Merriweather Sans',
 sans-serif;
 $heading_font: 'Exo',
 sans-serif;
-$text-font: 'Proza Libre',
+$text_font: 'Proza Libre',
 sans-serif;
-
+$edu_font: 'Edu VIC WA NT Beginner', cursive;
+$rubik_font: 'Rubik', sans-serif;
+$varela_font: 'Varela Round', sans-serif;
 
 // ************* INTRO *************
 
@@ -21,7 +23,7 @@ sans-serif;
    display: grid;
    grid-template-columns: repeat(6, 1fr);
    grid-template-rows: repeat(12, 1fr);
-   font-family: $intro-font;
+   font-family: $varela-font;
    color: $font-color;
    justify-items: center;
    align-items: center;
@@ -37,11 +39,11 @@ sans-serif;
    overflow: hidden;
    position: relative;
    border-radius: 50%;
-   grid-area: 1 / 1 / 13 / 4;
-   background-color: rgba(128, 105, 0, 0.423);
+   grid-area: 1 / 1 / 10 / 4;
+   background-color: $bg_color_lite;
    z-index: 0;
-   margin: -25em 0 0 -20em;
-   padding: 8em;
+   margin: -25em 0 0 -30em;
+   padding: 3em;
 }
 
 .pic-container img {
@@ -50,46 +52,48 @@ sans-serif;
 }
 
 .intro {
-   grid-area: 1 / 1 / 5 / 3;
+   grid-area: 1 / 1 / 3 / 3;
    border-radius: 10px;
    background: transparent;
-   font-family: $intro-font;
    font-size: 3vw;
    background: transparent;
    justify-self: start;
-   margin: 1em 0 1em 2.5em;
+   margin-left: 1.5em;
    z-index: 1;
 }
 
 .intro-airbnb {
-   grid-area: 4 / 2 / 6 / 3;
+   grid-area: 2 / 1 / 5 / 3;
    z-index: 1;
 }
 
 .airbnb-png {
-   width: 18vw;
+   width: 16vw;
+   margin: -2em 0 0 4em; 
 }
 
 .intro-super {
-   grid-area: 6 / 1 / 7 / 4;
+   grid-area: 4 / 1 / 6 / 4;
    font-size: 2vw;
-   margin-left: 1em;
+   margin: -2em 0 0 2em;
    border: 1px solid black;
-   padding: .5em 1em;
-   transform: skew(-10deg);
-   background-color: $bg-color;
+   border-radius: 28px;
+   padding: .5em;
+   // transform: skew(-10deg);
    justify-self: start;
+   z-index: 1;
 }
 
 .intro-ambass {
-   grid-area: 6 / 1 / 8 / 4;
+   grid-area: 5 / 1 / 7 / 4;
    font-size: 2vw;
    border: 1px solid black;
-   background-color: $shape_color_sec;
-   padding: .5em 1em;
-   transform: skew(-10deg);
-   margin: 3.5em 0 0 2em;
+   border-radius: 28px;
+   padding: .5em;
+   // transform: skew(-10deg);
+   margin: -1.5em 0 0 .8em;
    justify-self: start;
+   z-index: 1;
 }
 
 .intro-ambass h1 {
@@ -104,6 +108,7 @@ sans-serif;
    grid-template-columns: repeat(4, 2fr) 1fr;
    grid-template-rows: repeat(2, 1fr);
    border-top: 2px solid rgb(50, 74, 87);
+   background-color: $bg_color_lite;
 }
 
 .decorative-container {
@@ -125,7 +130,7 @@ sans-serif;
    border-radius: 50%;
    top: 0;
    right: 0;
-   box-shadow: 500px -500px 0 0 rgb(50, 74, 87);
+   box-shadow: 500px -500px 0 0 rgb(121, 133, 138);
 }
 
 .bathroom-img {
@@ -147,7 +152,7 @@ sans-serif;
 }
 
 .about-me-text h1 {
-   font-family: $heading-font;
+   font-family: $rubik-font;
    font-size: 3em;
 }
 
@@ -160,7 +165,7 @@ sans-serif;
    grid-area: 2 / 3 / 3 / 4;
    z-index: 1;
    background: transparent;
-   font-family: $text-font;
+   font-family: $text_font;
    font-size: 1.2em;
    width: 70%;
 }
@@ -173,6 +178,7 @@ sans-serif;
    grid-template-columns: 1fr 1fr repeat(5, 2fr);
    grid-template-rows: repeat(3, 1fr);
    border-bottom: 2px solid rgb(50, 74, 87);
+   background-color: $bg_color_lite;
 }
 
 .decorative-container-services {
@@ -216,7 +222,7 @@ sans-serif;
 }
 
 .services-text h1 {
-   font-family: $heading-font;
+   font-family: $rubik-font;
    font-size: 3em;
    background: transparent;
 }
@@ -230,7 +236,7 @@ sans-serif;
    grid-area: 2 / 3 / 3 / 4;
    z-index: 1;
    background: transparent;
-   font-family: $text-font;
+   font-family: $text_font;
    font-size: 1.2em;
    width: 70%;
 }
@@ -245,7 +251,7 @@ sans-serif;
 
 // ************* BUTTON *************
 
-@mixin btn__split($shape-color-pri, $shape-color-sec, $font-color) {
+@mixin btn__split($border_color, $bg_color_lite, $font_color) {
    .btn {
       position: relative;
       letter-spacing: 0.25em;
@@ -254,7 +260,7 @@ sans-serif;
       background: transparent;
       outline: none;
       font-size: 2em;
-      color: $btn_font-color;
+      color: $btn_font_color;
       z-index: 1;
 
       &::after,
@@ -269,15 +275,15 @@ sans-serif;
       }
 
       &::before {
-         background-color: rgb(50, 74, 87);
+         background-color: rgba(50, 74, 87, 0.722);
          top: -.5em;
          left: -1.5em;
       }
 
       &::after {
-         background-color: $shape-color-sec;
+         background-color: rgba(204, 204, 93, 0.559);
          top: .5em;
-         left: 1em;
+         left: 1.5em;
       }
 
       &:hover {
@@ -309,11 +315,12 @@ sans-serif;
 
 .button-container a {
    text-decoration: none;
+   font-family: $text_font;
    font-weight: 600;
    cursor: url(point-click.png), pointer;
 }
 
-@include btn__split($shape-color-pri, $shape-color-sec, $font-color);
+@include btn__split($border_color, $bg_color_lite, $font_color);
 
 .space-holder {
    height: 10em;
@@ -331,7 +338,7 @@ sans-serif;
 .footer p {
    background: transparent;
    color: rgb(170, 167, 167);
-   font-family: $text-font;
+   font-family: $text_font;
    font-size: 0.75em;
    padding: 10% 0;
 }
