@@ -5,7 +5,7 @@ import ProfilePic from '../images/profile-pic.png';
 const About = () => {   
    return (
       <div id="about" className="about-container">
-         <div className="decorative-container"></div>
+         <div className="decorative-container-about"></div>
          <div className="about-me-text">
             <h1>About Me</h1>
             <hr></hr>
@@ -13,8 +13,8 @@ const About = () => {
             <br></br>
             <p>Just one year after that purchase, we were awarded ‘Superhost’ status by Airbnb, and booking demand for our house increasingly grew. In 2021, Airbnb asked me to become a Superhost Ambassador (even featuring me in their ads), offering me a chance to consult and help people become new hosts at no cost to them. </p>
          </div>
-         <div className="bathroom-img"> 
-            <img src={ProfilePic} alt="bathroom" />
+         <div className="profile-img"> 
+            <img src={ProfilePic} alt="profile-pic" />
          </div>
       </div>
    )

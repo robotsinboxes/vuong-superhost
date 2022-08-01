@@ -1,12 +1,11 @@
 import './Styles.scss';
-import BathroomWall from '../images/bathroom_wall.jpg';
+import Bedroom from '../images/bedroom.jpg';
 
 const Services = () => {   
    return (
       <div id="services" className="services-container">
          <div className="decorative-container-services"></div>
-
-         <div className="services-text">
+         <div className="services-text-pp1">
             <h1>What Can I Help You With?</h1>
             <hr></hr>
             <p>Transitioning from Airbnb travelers to hosts was easy for us because we were such frequent travelers, and learned a lot from the places we stayed. (It also helped that we had a genuine love and knack for decorating and hosting). But for many people - the thought of inviting strangers into your house can be nerve-wracking. I can help alleviate some of those worries, and walk you through booking, vetting, security, insurance, payouts, and much more.</p>
@@ -18,14 +17,17 @@ const Services = () => {
             , and Airbnb will connect you with me. Send me a quick introduction and i’ll get back to you the same day. </p>
          
          </div>
-         <div className="livingrm-img"> 
-            <img src={BathroomWall} alt="living-room" />
+         <div className="bedroom-img"> 
+            <img src={Bedroom} alt="bedroom" />
          </div>
          <div className="button-container">
             <a href='https://www.airbnb.com/askasuperhost?from=mentee_landing_page&ambassadorUserId=14564141&r=teddyvuong&s=9' target='_blank' rel='noreferrer' className='btn'>
                Get started!
             </a>
          </div>
+         {/* <div className="livingrm-img"> 
+            <img src={Bathroom} alt="bathroom" />
+         </div> */}
       </div>
    )
 };
