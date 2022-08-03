@@ -9,9 +9,11 @@ const Intro = () => {
          <div className="intro-bg-img">
             <img src={LivingRoom} alt='airbnb'></img>
          </div>
+
          <div className="intro-airbnb">
             <img className='airbnb-png' src={AirbnbPng} alt='airbnb'></img>
          </div>
+         
          <div className="intro-title">
             <div className="intro">
                <p>Learn tips</p>
@@ -23,6 +25,11 @@ const Intro = () => {
             </div>
          </div>
          
+         {/* <div className="circle"></div> */}
+         <div className='animated-name'>
+            <h1>Teddy Vuong</h1>
+         </div>
+
          {/* ARROW test - @Jakub Honisek, Codepen*/}
          <div class="arrow-down">
             <div class="chevron"></div>
