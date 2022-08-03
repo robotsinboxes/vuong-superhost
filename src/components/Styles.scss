@@ -1,10 +1,12 @@
-$bg_color: rgba(15, 122, 139, 0.747);
-$bg_color_lite: rgba(184, 189, 190, 0.548);
-$bg_intro_title: rgba(219, 170, 91, 0.547);
+$bg_color: rgb(35, 70, 86);
+$bg_color_lite: rgba(132, 131, 131, 0.287);
+$bg_intro_title: rgba(17, 57, 75, 0.604);
+$bg_airbnb: rgba(239, 235, 220, 0.583);
 $text_bg: rgb(239, 237, 230);
 $shadow_color: rgba(59, 59, 60, 0.632);
 $border_color: rgba(69, 83, 82, 0.364);
-$font_color: rgb(41, 37, 37);
+$font_color_title: rgb(225, 228, 210);
+$font_color_black: rgb(20, 19, 19);
 $btn_font_color: rgb(41, 27, 27);
 $base: 0.6rem;
 $intro_font: 'Merriweather Sans',
@@ -24,12 +26,11 @@ $varela_font: 'Varela Round', sans-serif;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
    font-family: $varela-font;
-   color: $font-color;
+   color: $font-color_black;
    justify-items: center;
    align-items: center;
    height: 100vh;
    width: 100vw;
-   overflow: hidden;
    z-index: -1;
 }
 
@@ -42,57 +43,51 @@ $varela_font: 'Varela Round', sans-serif;
    height: 100vh;
 }
 
-.circle {
-   width: 100%;
-   height: 80%;
-   overflow: hidden;
-   position: relative;
-   border-radius: 40%;
-   grid-area: 1 / 1 / 10 / 7;
-   background-color: $bg_color_lite;
-   z-index: 0;
-   margin: -25em 0 0 -30em;
-   padding: 3em;
-}
-
-.pic-container img {
-   max-width: 100vw;
-   max-height: 100vh;
-}
-
-.intro {
-   grid-area: 1 / 1 / 3 / 5;
-   border-radius: 10px;
-   background: transparent;
-   font-size: 3vw;
-   background: transparent;
-   justify-self: start;
-   margin-left: 2.5em;
-   z-index: 1;
-}
+// .circle {
+//    width: 85%;
+//    height: 100%;
+//    overflow: hidden;
+//    position: relative;
+//    border-radius: 50%;
+//    grid-area: 1 / 1 / 10 / 7;
+//    background-color: $bg_color;
+//    box-shadow: 0 0 6px black;
+//    z-index: 0;
+//    margin: -25em 0 0 -30em;
+//    padding: 3em;
+// }
 
 .intro-airbnb {
-   grid-area: 2 / 1 / 5 / 5;
-   z-index: 1;
+   grid-area: 1 / 4 / 4 / 6;
+   background-color: $bg_airbnb;
+   border-radius: 50%;
+   box-shadow: 0 0 6px black;
+   z-index: 2;
+   padding: 10% 18%;
+   margin-left: -2em;
 }
 
 .airbnb-png {
-   width: 18vw;
-   margin: -2em 0 0 4em; 
+   width: 6vw;
 }
 
 .intro-title {
-   grid-area: 4 / 1 / 6 / 4;
+   grid-area: 1 / 1 / 7 / 4;
    font-size: 2vw;
-   margin: 0.5em 0 0 2em;
+   color: $font_color_title;
+   margin-left: 1em;
    background-color: $bg_intro_title;
    border-radius: 20px;
-   border: 1px solid rgb(43, 43, 43);
-   box-shadow: -6px -4px rgba(40, 40, 40, 0.58);
-   padding: .5em;
+   box-shadow: 0 0 10px black;
+   text-shadow: 1px 1px 0px black;
+   padding: 1em;
    justify-self: start;
-   text-align: center;
    z-index: 1;
+}
+
+.intro {
+   font-size: 1.3em;
+   padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 768px){
@@ -106,12 +101,12 @@ $varela_font: 'Varela Round', sans-serif;
 // *** Arrow Animation ***
 
 .arrow-down {
-   grid-area: 9 / 1 / 10 / 2;
+   grid-area: 9 / 1 / 10 / 3;
    display: flex;
    justify-content: center;
    align-items: center;
    width: 10%;
-   height: 10vh;
+   height: 5vh;
 }
 
 .chevron {
@@ -138,7 +133,7 @@ position: absolute;
 top: 0;
 height: 100%;
 width: 50%;
-background: #2c3e50;
+background: #092c50;
 }
 
 .chevron:before {
@@ -176,7 +171,6 @@ transform: skewY(-30deg);
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(2, 1fr);
-   // border-top: 2px solid rgb(50, 74, 87);
    background-color: $bg_color_lite;
 }
 
@@ -199,7 +193,7 @@ transform: skewY(-30deg);
    border-radius: 50%;
    top: 0;
    right: 0;
-   box-shadow: 200px -200px 0 0 rgb(55, 87, 96);
+   box-shadow: 300px -200px 0 0 rgb(50, 74, 87);
 }
 
 .profile-img {
@@ -208,16 +202,16 @@ transform: skewY(-30deg);
 }
 
 .profile-img img {
-   width: 80%;
+   width: 85%;
    z-index: 1;
-   margin: 10% 0 5% 10%;
+   margin: 10% 0 5% 15%;
    border: 8px solid black;
    border-radius: 50%;
 }
 
 .about-me-text {
    grid-area: 1 / 6 / 3 / 12;
-   padding-top: 15%;
+   padding: 20% 0 0 10%;
    background: transparent;
    z-index: 1;
 }
@@ -228,7 +222,7 @@ transform: skewY(-30deg);
 }
 
 .about-me-text hr {
-   margin-bottom: 3%;
+   margin: 3% 0;;
    width: 70%;
 }
 
@@ -236,9 +230,9 @@ transform: skewY(-30deg);
    grid-area: 2 / 3 / 3 / 4;
    z-index: 1;
    background: transparent;
-   font-family: $text_font;
-   font-size: 1.1em;
-   width: 70%;
+   font-family: $rubik_font;
+   font-size: 1.3em;
+   width: 75%;
 }
 
 
@@ -247,7 +241,7 @@ transform: skewY(-30deg);
 .services-container {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
-   grid-template-rows: repeat(6, 1fr);
+   grid-template-rows: repeat(3, 1fr);
    border-bottom: 2px solid rgb(50, 74, 87);
    background-color: $bg_color_lite;
 }
@@ -257,7 +251,7 @@ transform: skewY(-30deg);
    height: 100%;
    overflow: hidden;
    position: relative;
-   grid-area: 1 / 1 / 7 / 7;
+   grid-area: 2 / 1 / 7 / 6;
    z-index: 5;
    background: transparent;
 }
@@ -271,7 +265,7 @@ transform: skewY(-30deg);
    border-radius: 50%;
    bottom: 0;
    left: 0;
-   box-shadow: -500px 500px 0 0 rgb(50, 74, 87);
+   box-shadow: -200px 500px 0 0 rgb(50, 74, 87);
 }
 
 .bedroom-img {
@@ -283,14 +277,16 @@ transform: skewY(-30deg);
    width: 80%;
    z-index: 2;
    padding: 5px;
+   margin-top: -2em;
    border: 8px solid black;
    border-radius: 100px;
 }
 
 .services-text-pp1 {
    grid-area: 1 / 1 / 2 / 6;
-   padding: 5% 0 0 15%;
+   padding: 16% 0 0 25%;
    background: transparent;
+   width: 100%;
    z-index: 1;
 }
 
@@ -301,7 +297,7 @@ transform: skewY(-30deg);
 }
 
 .services-text-pp1 hr {
-   margin-bottom: 3%;
+   margin: 3% 0;;
    width: 70%;
 }
 
@@ -309,13 +305,43 @@ transform: skewY(-30deg);
    grid-area: 2 / 3 / 3 / 4;
    z-index: 1;
    background: transparent;
-   font-family: $text_font;
-   font-size: 1.1em;
+   font-family: $rubik_font;
+   font-size: 1.3em;
+   width: 75%;
+}
+
+.bathroom-img {
+   grid-area: 2 / 3 / 4 / 9;
+   background: transparent;
+   margin: 25% 0 0 5%;
+}
+
+.bathroom-img img {
+   width: 75%;
+   z-index: 2;
+   padding: 5px;
+   border: 8px solid black;
+   border-radius: 100px;
+}
+
+.services-text-pp2 {
+   grid-area: 2 / 8 / 4 / 13;
+   padding: 40% 0 0 10%;
+   background: transparent;
+   width: 100%;
+   z-index: 1;
+}
+
+.services-text-pp2 p {
+   z-index: 1;
+   background: transparent;
+   font-family: $rubik_font;
+   font-size: 1.3em;
    width: 70%;
 }
 
 .link a {
-   cursor: url(point-click.png), pointer;
+   cursor: url(pointer-click.png), pointer;
    text-decoration: none;
    font-style: italic;
    color:rgb(7, 103, 142)
@@ -324,7 +350,7 @@ transform: skewY(-30deg);
 
 // ********************* BUTTON *********************
 
-@mixin btn__split($border_color, $bg_color_lite, $font_color) {
+@mixin btn__split($border_color, $bg_color_lite, $font_color_black) {
    .btn {
       position: relative;
       letter-spacing: 0.25em;
@@ -348,13 +374,15 @@ transform: skewY(-30deg);
       }
 
       &::before {
-         background-color: $bg_color_lite;
+         background-color: $bg_intro_title;
+         box-shadow: 0 0 10px black;
          top: -.5em;
          left: -1.5em;
       }
 
       &::after {
-         background-color: rgba(204, 204, 93, 0.559);
+         background-color: rgba(234, 234, 64, 0.699);
+         box-shadow: 0 0 10px black;
          top: .5em;
          left: 1.5em;
       }
@@ -379,21 +407,21 @@ transform: skewY(-30deg);
 }
 
 .button-container {
-   padding-top: 4em;
    text-align: center;
    width: auto;
    margin: auto;
-   grid-area: 3 / 5 / 4 / 8;
+   padding: 5% 0 0 10%;;
+   grid-area: 3 / 7 / 4 / 13;
 }
 
 .button-container a {
    text-decoration: none;
-   font-family: $text_font;
-   font-weight: 600;
+   font-family: $edu_font;
+   font-weight: 900;
    cursor: url(point-click.png), pointer;
 }
 
-@include btn__split($border_color, $bg_color_lite, $font_color);
+@include btn__split($border_color, $bg_color_lite, $font_color_black);
 
 .space-holder {
    height: 10em;
@@ -401,6 +429,10 @@ transform: skewY(-30deg);
 
 
 // ********************* FOOTER *********************
+
+.color-block-1 {
+   background-color: black;
+}
 
 .footer {
    display: flex;
@@ -412,6 +444,6 @@ transform: skewY(-30deg);
    background: transparent;
    color: rgb(170, 167, 167);
    font-family: $text_font;
-   font-size: 0.75em;
+   font-size: 0.8em;
    padding: 10% 0;
 }
